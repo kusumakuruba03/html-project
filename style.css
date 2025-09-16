@@ -1,0 +1,852 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'georgia', sans-serif;
+  height: 200vh; /* To demonstrate scroll */
+}
+
+/* Sticky Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+  background-color: #333;;
+  color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* backdrop-filter: blur(4px); */
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  /* letter-spacing: 2px; */
+  color: white;
+}
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  text-align: right;
+  gap: 5rem;
+  align-items: center;
+  margin-left: 35rem;
+}
+.nav-links a,
+.dropbtn {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.nav-links a:hover,
+.nav-links a:active{
+  color: skyblue;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* Appears below the dropdown trigger */
+  left: 0;
+  background-color: #3f463f;
+  min-width: 160px;
+  z-index: 999;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  padding: 15px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url(pexels-elina-sazonova-1850547.jpg) center center/cover no-repeat;
+  display: flex;
+  text-align: right;
+  font-size: 4rem;
+  padding: 100px 20 px;
+  min-height: 100vh;
+  align-items: center;
+  color: white;
+  justify-content: right;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+  margin-right: 5rem;
+  margin-bottom: 20px;
+}
+.hero-text h2{
+    font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+  margin-right: 5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  margin-right: 5rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-right: 5.5rem;
+}
+
+.hero .btn:hover {
+  background: white;
+  color: black;
+}
+/* Sections */
+section {
+  padding: 6rem 0;
+  text-align: center;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3f463f;
+}
+.pb-header {
+    background: url("relaxation.html") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.page-wrapper {
+  text-align: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.main-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 32px;
+  color: #2c3e30;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+.travel-card {
+  text-align: center;
+}
+.travel-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.card-title {
+  margin-top: 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #444;
+}
+.card-btn {
+  margin-top: 15px;
+  padding: 12px 30px;
+  border: 2px solid #444;
+  background: transparent;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+.card-btn:hover {
+  background: #444;
+  color: #fff;
+}
+.card-btn:hover a {
+  color: #fff;
+}
+/* Relax Section */
+.pb-relax {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 40px;
+}
+.pb-relax-title {
+    font-size: 40px;
+}
+.pb-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.pb-relax-price {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Pricing Cards */
+.pricing-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  width: 280px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+.card p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+.card button {
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: #3f463f;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.card button:hover {
+  background-color: #555;
+}
+/* Sections */
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3b423b;
+}
+.section p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+  color: #444;
+}
+/* Grid Sections */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-text {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #3b423b;
+}
+.grid p {
+  font-size: 16px;
+  color: #444;
+}
+.grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dark {
+  background-color: #4b574d;
+  color: #fff;
+}
+.dark h3, .dark p {
+  color: #fff;
+}
+/* Sections */
+.intro {
+  height: 50vh;
+  background: #dbe2dd;
+  text-align: center;
+  padding: 80px 60px;
+}
+.intro h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3b423b;
+}
+.intro p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+  color: #444;
+}
+.subscribe-section{
+  background-color: #333;
+   color: white ;
+  font-family: Georgia,serif;
+  display: flex;
+  padding: 20px;
+}
+.subscribe-text{
+  flex: 1;
+}
+.email-form{
+flex: 1  ;
+text-align: right;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: #566153;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+}
+.pricing h1 {
+  font-size: 48px;
+  margin: 0;
+}
+.pricing p {
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.price-tag {
+  text-align: right;
+}
+.price-tag .from {
+  font-size: 24px;
+}
+.price-tag .amount {
+  font-size: 100px;
+}
+/* Visit Gallery */
+.visit-gallery {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.visit-gallery img {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.contact-form button {
+  width: fit-content;
+  margin: auto;
+  padding: 0.75rem 2rem;
+  background: #3f463f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #555;
+}
+ footer {
+  background-color: #c5cdc8;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #3a463b;
+}
+.footer-logo {
+  font-size: 36px;
+  font-weight: 600;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links a {
+  color: #3a463b;
+  text-decoration: underline;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.footer-contact {
+  text-align: right;
+  font-size: 16px;
+}
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .visit-gallery img {
+    width: 90%;
+  }
+}
+/* Sections */
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3b423b;
+}
+.section p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+  color: #444;
+}
+/* Grid Section */
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-text {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-text h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.grid-text p {
+  font-size: 16px;
+}
+.grid-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dark {
+  background-color: #4b574d;
+  color: #fff;
+}
+/* Pricing */
+.pricing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #566153;
+  color: white;
+  padding: 60px 80px;
+}
+.pricing-content h1 {
+  font-size: 48px;
+}
+.pricing-content p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.price span {
+  font-size: 24px;
+}
+.price h2 {
+  font-size: 100px;
+  font-weight: normal;
+}
+.btn-outline {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  background: transparent;
+}
+/* Shared Section Styling */
+.sectiona {
+  display: flex;
+  padding: 60px 0;
+}
+/* Place to Be */
+.place-to-be {
+  background-color: #e1ebe6;
+}
+.place-image {
+  flex: 1;
+  background-image: url("templebali.avif");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+.place-content {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2e392f;
+}
+.place-content h2 {
+  font-size: 36px;
+  margin-top: 0;
+  font-weight: normal;
+}
+.place-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 15px 35px;
+  border: 2px solid #2e392f;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #2e392f;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: fit-content;
+}
+.white-btn {
+  border-color: white;
+  color: white;
+}
+/* In Love with Bali */
+.love-bali {
+  background-color: #3f4a3c;
+  color: white;
+}
+.love-content {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.love-content h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: normal;
+}
+.love-image {
+  flex: 1;
+}
+.love-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-btn{
+  padding: 15px 35px;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 1rem;
+  background-color: transparent;
+}
+.more-btn:hover{
+  background-color: white;
+  color: black;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #e1ebe6;
+  text-align: center;
+  padding: 80px;
+}
+.testimonials h1 {
+  font-size: 50px;
+  font-family: 'Gill Sans', sans-serif;
+}
+.testimonials p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+/* Instagram */
+.instagram {
+  background-color: #3f4a3c;
+  color: white;
+  padding-bottom: 40px;
+}
+.insta-header {
+  text-align: center;
+  padding: 50px;
+}
+.insta-gallery {
+  display: flex;
+  gap: 50px;
+  padding-left: 150px;
+}
+.insta-button {
+  text-align: center;
+  margin-top: 20px;
+}
+.insta-button button {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+}
+.insta-button a {
+  text-decoration: none;
+  color: black;
+}
+/* Subscribe */
+.subscribe {
+  display: flex;
+  background-color: #e1ebe6;
+  padding: 60px 80px;
+  align-items: center;
+}
+.subscribe-text {
+  flex: 1;
+}
+.subscribe-text h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.subscribe-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-form input {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #a3aaa4;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+.subscribe-form button {
+  padding: 12px 30px;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: transparent;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+/* contact us */
+.hero-section {
+  height: 100vh;
+  background: url(Things-to-Do-in-Bali-in-2025.jpeg) center center/cover no-repeat;
+  display: flex;
+  text-align: center;
+  padding: 100px 20 px;
+  min-height: 60vh;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+.hero-text1 h2 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+  margin-right: 40px;
+}
+.hero-text1 h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  margin-right: 40px; 
+}
+.about-intro {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.about-intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.profile-section {
+    padding: 60px 10%;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+.profile.reverse {
+    flex-direction: row-reverse;
+}
+.profile img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+.profile h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+/* visit */
+.zero {
+      background-image: url('relaxation.jpg'); /* Use your waterfall image here if needed */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 150px 20px;
+    }
+
+    .zero h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .zero h1 {
+      font-size: 4rem;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* Organize Trip Section */
+    .organize {
+      background-color: #dbe2dd;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .organize h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .organize p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+    }
